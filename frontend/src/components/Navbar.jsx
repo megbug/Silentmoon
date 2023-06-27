@@ -1,6 +1,8 @@
+import '../sass/Navbar.scss'
+
 const Navbar = () => {
     return (
-        <section>
+        <section className="navcontainer">
 
         </section>
     );
