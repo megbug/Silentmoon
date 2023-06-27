@@ -1,14 +1,11 @@
 import { useState } from 'react'
 import './App.css'
 
-
 function App() {
-  
 
   return (
     <>
-     <h1>Silent Moon</h1>
-
+     <h1>Silent MooN</h1>
     </>
   )
 }
