@@ -1,0 +1,85 @@
+@media only screen and (min-width: 992px) {
+
+    /* ===========LandingPage===========*/
+    .landingContainer {
+        display: flex;
+        justify-content: space-between;
+        .handstand {
+            height: 80vh;
+            margin: 5% auto;
+            box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px 0px inset;
+            border-radius: 10px 10px 0 0;
+        }
+        .accessArea {
+            background-color: rgba(74, 80, 61, 0.8);
+            border-radius: 20px 0 0 20px;
+            width: 50%;
+            margin: 0%;
+            padding: 5% 0;
+
+            .logoDark {
+                color: #3F414E;;
+                font-size: 2.5rem;
+                // font-family: $sansP600;
+                // letter-spacing: 3px;
+                // word-spacing: 0.5rem;
+                // text-align: center;
+                // padding-top: 2.2rem;
+              }
+        
+              .intro-Hdl {
+                text-align: center;
+                color: #4A503D;
+                font-size: 2rem;
+                padding-bottom: 1.7rem;
+                margin-top: 0.2rem;
+                font-weight: 400;
+            }
+
+            .accessDiv {
+                box-shadow: rgba(0, 0, 0, 0.6) 0px 2px 4px 0px inset;
+                border-radius: 10px;
+                // height: 30%;
+                width: 70%;
+                margin: 0 auto;
+                // text-align: center;
+                background-color: rgba(255, 255, 255, 0.2);
+                display: flex;
+                justify-content: space-around;
+
+                .accessSignUp {
+                    .signUp-container {
+                        background-color: yellow;
+                    }
+                    
+                    .signup-form {
+                        margin-top: 15%;
+                        background-color: green;
+                    }
+                    
+                    .Link {
+                        text-decoration: none;
+                        color: #A1A4B2;
+                        display: flex;
+                        justify-content: center;
+                        padding-bottom: 20%;
+                    
+                        span {
+                            color: #E28F83
+                        }
+                    }
+                    
+                    .errorMessage {
+                        text-align: center;
+                        color: red;
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    
+}
