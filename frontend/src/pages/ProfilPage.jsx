@@ -27,13 +27,14 @@ import reminderIcon from "../assets/img/reminder_button.svg"
 import Navbar from "../components/Navbar";
 import FavVideoSlider from "../components/FavVideoSlider"
 import FavMeditationSlider from "../components/FavMeditationSlider"
+import Logo from "../components/Logo";
 
 const ProfilPage = () => {
     const { user, logout } = useContext(UserContext);
 
     return (
         <>
-            <h1 className="logoDark">SILENT MOON</h1>
+            <Logo/>
             <section className="profilSection">
                 <article className="nameLogoutSection">
                     <h2 className="nameHeadline">Hey {user.name}</h2>

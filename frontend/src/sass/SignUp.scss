@@ -1,34 +1,9 @@
-.backBtn_sign_container {
-    padding: 5vh 0 6vh 5vw;
-}
-
-.signUp-container {
-    background-color: #FFFFFF;
-    background-image: url('../assets/img/bg_login.jpg');
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: contain;
-}
-
-.signup-form {
-    margin-top: 15%;
-}
-
-.Link {
-    text-decoration: none;
-    color: #A1A4B2;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 20%;
-
-    span {
-        color: #E28F83
+.signUpPage {
+    text-align: center;
+    .pageHeadline {
+        padding: 4rem 0;
     }
 }
 
-.errorMessage {
-    text-align: center;
-    color: red;
-    display: flex;
-    justify-content: center;
-}
+
+

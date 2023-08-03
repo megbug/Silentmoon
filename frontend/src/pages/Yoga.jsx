@@ -1,4 +1,5 @@
 import Gallery from '../components/Gallery';
+import Logo from '../components/Logo';
 import Navbar from '../components/Navbar'
 import "../sass/Yoga.scss";
 // import Searchbar from '../components/SearchBar';
@@ -7,16 +8,16 @@ const Yoga = () => {
 
 
     return (
-        <>
+        <section className='pageWrapper'>
             <section className='yoga_site_container'>
-                <h1 className='logoDark'>SILENT MOON</h1>
-                <h2 className='hdl-gray-sites'>Yoga</h2>
-                <h3 className='subhead-sites'>Find your inner zen from annywhere.</h3>
+                <Logo/>
+                <h2 className='pageHeadline'>Yoga</h2>
+                <h3 className='text'>Find your inner zen from annywhere.</h3>
 
                 <Gallery />
             </section>
             <Navbar />
-        </>
+        </section>
     );
 }
 

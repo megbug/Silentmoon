@@ -9,6 +9,7 @@ import HomeTopItem from "../components/HomeTopItem";
 
 import '../sass/HomeView.scss'
 import '../App.scss'
+import Logo from "../components/Logo.jsx";
 
 
 const HomeView = () => {
@@ -24,7 +25,7 @@ const HomeView = () => {
 
     return (
         <div className="home_container">
-            <h1 className="logoDark">SILENT MOON</h1>
+            <Logo/>
             <article className="welcome_article">
                 <h3 className="hdl-medium-green">Namasté {user.name}</h3>
                 <p className="description_medium_lightgray">We hope you have a good day</p>

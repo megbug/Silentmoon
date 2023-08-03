@@ -5,6 +5,10 @@
 
 $sansP600: 'SourceSansProSemibold';
 
+.pageWrapper {
+  margin: 0;
+}
+
 .videoBackground {
   background-image: url('../assets/img/popup-background.svg');
   height: 100vh;

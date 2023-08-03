@@ -20,12 +20,15 @@
 
 //--------------COLORS--------------
 
-$darkGray: #3F414E;
+
 $darkGreen: #4A503D;
-$lightGray: #A1A4B2;
-$beige: #FAF2DA;
-$white: #FEFCF8;
-$peach: #E28F83;
+$darkGray: rgb(63, 65, 78);         // #3F414E
+$lightGray: rgb(161, 164, 178);     // #A1A4B2  
+$beige: rgb(250, 242, 218);         // #FAF2DA
+$white: rgb(254, 252, 248);         // #FEFCF8
+$blue: rgb(102, 136, 170);          // #6688AA
+$blueBack: rgba(102, 136, 170, 0.6);
+$darkBlue: rgb(61, 96, 129);  //#3D6081
 
 
 //--------------FONTS--------------
@@ -38,7 +41,7 @@ $sansP400: 'SourceSansProRegular';
 
 //--------------GLOBALS--------------
 * {
-  margin: 0;
+  margin: 0%;
   padding: 0;
   box-sizing: border-box;
 }
@@ -48,8 +51,56 @@ html {
   scroll-behavior: smooth;
 }
 
-.logoDark {
-  color: $darkGreen;
+/* ===========New Global Styling===========*/
+
+.pageWrapper {
+  // text-align: center;
+  margin: 5%;
+  // background-color: #E28F83;
+}
+
+.logo {
+  font-family: $sansP400;
+  font-size: 1.6rem;
+  color: $darkGray;
+  letter-spacing: 3px;
+  word-spacing: 0.5rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+  /* ======headlines======*/
+.pageHeadline {
+  font-family: $sansP600;
+  font-size: 3.6rem;
+  color: $darkGray;
+  // padding: 2rem auto;
+}
+
+.pageSubHeadline {
+  font-family: $sansP600;
+  font-size: 2.4rem;
+  color: $darkBlue;
+}
+
+  /* ======p-tags for intro/questions/descriptions======*/
+.text {
+  font-family: $sansP600;
+  font-size: 1.6rem;
+  color: $lightGray;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+
+.weekdays img {
+  padding: 3rem 0.5vh;
+}
+
+
+/* ===========New Styling End===========*/
+
+.subLogoDark {
   font-size: 1.5rem;
   font-family: $sansP600;
   letter-spacing: 3px;
@@ -77,53 +128,77 @@ a {
 
 //--------------BUTTONS--------------
 
-.bigBtn-red {
-  background-color: $peach;
+.bigBtn {
+  background-color: $blue;
+  font-size: 1.6rem;
+  line-height: 4.8rem;
+  // color: $darkGray;
   color: $white;
   display: flex;
   justify-content: center;
   text-align: center;
-  border: 1px solid $peach;
+  border: 1px solid $blue;
   border-radius: 38px;
-  width: 32rem;
-  min-height: 5rem;
-  max-height: 6rem;
-  padding: 1%;
+  width: 86%;
+  // padding: 1%;
   margin: 3% auto;
   display: flex;
   align-items: center;
+  font-family: $sansP400;
 }
 
 .input {
+  font-size: 1.6rem;
+  line-height: 4.8rem;
   display: flex;
   justify-content: center;
   text-align: center;
-  border: 1px solid $peach;
+  border: 1px solid $blueBack;
   border-radius: 38px;
-  width: 32rem;
-  min-height: 5rem;
-  max-height: 6rem;
-  padding: 1%;
+  width: 86%;
+  // width: 32rem;
+  // min-height: 5rem;
+  // max-height: 6rem;
+  // padding: 1%;
   margin: 3% auto;
   display: flex;
   align-items: center;
   background-color: transparent;
+  color: $darkGray;
+
+}
+
+::placeholder {
+  color: white;
+  color: $darkGray;
+  text-transform: uppercase;
+  font-family: $sansP400;
 }
 
 //--------------HEADLINES--------------
 
+.headline2 {
+  text-align: center;
+  font-size: 3rem;
+  padding-bottom: 1.7rem;
+  margin-top: 0.2rem;
+  color: $darkGray;
+  font-family: $sansP400;
+  letter-spacing: 1px;
+}
+
 .hdl-big-green-left {
   font-family: $sansP900;
   font-size: 2.4rem;
-  color: $darkGreen;
+  color: $darkGray;
   letter-spacing: 0.25rem;
   text-align: left;
 }
 
-.hdl-big-green-center {
+.hdl-big-gray-center {
   font-family: $sansP900;
   font-size: 3.4rem;
-  color: $darkGreen;
+  color: $darkGray;
   letter-spacing: 0.25rem;
   text-align: center;
 }
@@ -194,4 +269,23 @@ a {
 .button_headline {
   font-size: 1.3rem;
   color: $lightGray;
+}
+
+.errorMessage {
+  text-align: center;
+  color: rgb(221, 52, 61);
+  display: flex;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+/* ============ p Tags ============*/
+
+.pIntro  {
+  text-align: center;
+  color: $darkGray;
+  font-size: 1.6rem;
+  padding-bottom: 4.6rem;
+  line-height: 1.7rem;
+  font-family: $sansP600;
 }

@@ -61,26 +61,26 @@ export default function SignUp({isDesktop}) {
     }
 
     return (
-        <section className='signUp-container'>
-            <h1 className='hdl-big-green-center' >Create your Account</h1>
-            <form onSubmit={handleSubmit} className='signup-form'>
-                <input className='input' type='text' id='name' placeholder='NAME' value={data.name} onChange={(e) => { setData({ ...data, name: e.currentTarget.value }) }} />
+        <section className='signUpPage'>
+            <h2 className='pageHeadline'>Create your account</h2>
+            <form onSubmit={handleSubmit}>
+                <input className='input' type='text' id='name' placeholder='name' value={data.name} onChange={(e) => { setData({ ...data, name: e.currentTarget.value }) }} />
                 <small className='errorMessage'>
                     {error.name && error.name}
                 </small>
-                <input className='input' type='text' id='surname' placeholder='SURNAME' value={data.surname} onChange={(e) => { setData({ ...data, surname: e.currentTarget.value }) }} />
+                <input className='input' type='text' id='surname' placeholder='surname' value={data.surname} onChange={(e) => { setData({ ...data, surname: e.currentTarget.value }) }} />
                 <small className='errorMessage'>
                     {error.surname && error.name}
                 </small>
-                <input className='input' type='email' id='email' placeholder='EMAIL' value={data.email} onChange={(e) => { setData({ ...data, email: e.currentTarget.value }) }} />
+                <input className='input' type='email' id='email' placeholder='email' value={data.email} onChange={(e) => { setData({ ...data, email: e.currentTarget.value }) }} />
                 <small className='errorMessage'>
                     {error.email && error.email}
                 </small>
-                <input className='input' type='password' id='password' placeholder='PASSWORD' value={data.password} onChange={(e) => { setData({ ...data, password: e.currentTarget.value }) }} />
+                <input className='input' type='password' id='password' placeholder='password' value={data.password} onChange={(e) => { setData({ ...data, password: e.currentTarget.value }) }} />
                 <small className='errorMessage'>
                     {error.password && error.password}
                 </small>
-                <button className='bigBtn-red'>REGISTER</button>
+                <button className='bigBtn'>REGISTER</button>
             </form>
         </section>
     );

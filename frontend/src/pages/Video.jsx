@@ -10,6 +10,7 @@ import Navbar from '../components/Navbar.jsx'
 import '../sass/Video.scss'
 
 import { UserContext } from '../contexts/UserContext';
+import Logo from '../components/Logo';
 
 const Video = () => {
     const { user, setUser } = useContext(UserContext);
@@ -27,9 +28,10 @@ const Video = () => {
     }, [])
 
     return (
-        <div className='videoBackground'>
+        <section className='pageWrapper'>
+            <div className='videoBackground'>
             <article className='videoSection'>
-                <h1 className='logoDark'>SILENT MOON</h1>
+                <Logo/>
                 <BackButton />
                 {/* ReactPlayer streams videofile*/}
                 <div className='player-wrapper'>
@@ -50,6 +52,7 @@ const Video = () => {
             </article>
             <Navbar />
         </div>
+        </section>
     );
 }
 

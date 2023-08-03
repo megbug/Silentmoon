@@ -1,71 +1,29 @@
 .landingContainer {
     height: 100vh;
-}
-
-.handstand {
-    background-image: url('../assets/img/handstand_border.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    width: 100vw;
-    max-width: 400px;
-    margin: 0 auto;
-    padding-bottom: 55vh;
-}
-
-.intro-Hdl {
-    text-align: center;
-    color: #4A503D;
-    font-size: 3rem;
-    padding-bottom: 1.7rem;
-    margin-top: 0.2rem;
-    font-weight: 600;
-}
-
-.intro-Text {
-    text-align: center;
-    color: #A1A4B2;
-    font-size: 1.6rem;
-    padding-bottom: 4.6rem;
-    line-height: 1.7rem;
-    font-family: 'SourceSansProRegular';
-    font-weight: 500;
-}
-
-.intro-bigBtn-red {
-    background-color: #E28F83;
-    color: #FFFFFF;
-    border: 1px solid #E28F83;
-    border-radius: 38px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 80%;
-    margin: 4% auto;
-}
-
-.intro-bigBtn-red:hover {
-    cursor: pointer;
-
-    button:hover {
-        cursor: pointer;
+    .handstand {
+        background-image: url('../assets/img/handstand_border.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        width: 100vw;
+        max-width: 400px;
+        margin: 0 auto;
+        padding-bottom: 55vh;
+    }
+    .headline2 {
+        padding: 0;
+    }
+    .introLink {
+        font-size: 1.4rem;
+        padding-top: 0.5rem;
+        padding-bottom: 3.5rem;
+        text-decoration: none;
+        color: rgb(161, 164, 178);
+        display: flex;
+        justify-content: center;
+        span {
+            color: rgb(102, 136, 170);
+        }
     }
 }
 
-.intro-Btn-Link {
-    text-decoration: none;
-}
-
-.intro-Link {
-    font-size: 1.4rem;
-    padding-top: 0.5rem;
-    padding-bottom: 3.5rem;
-    text-decoration: none;
-    color: #A1A4B2;
-    display: flex;
-    justify-content: center;
-
-    span {
-        color: #E28F83
-    }
-}
