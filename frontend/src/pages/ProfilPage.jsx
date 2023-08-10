@@ -1,8 +1,13 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+
 import { UserContext } from "../contexts/UserContext";
-import { Link } from "react-router-dom"
-// import "../sass/ProfilPage.scss"
-// import "../sass/SliderItem.scss"
+
+import Logo from "../components/Logo";
+import Searchbar from "../components/SearchBar";
+import Slider from "../components/Slider";
+import Navbar from "../components/Navbar";
 
 import moIcon from "../assets/img/mo_btn.svg";
 import moActIcon from "../assets/img/mo_active_btn.svg";
@@ -19,23 +24,50 @@ import saActIcon from "../assets/img/sa_active_btn.svg";
 import suIcon from "../assets/img/su_btn.svg";
 import suActIcon from "../assets/img/su_active_btn.svg";
 
-
 import logoutIcon from "../assets/img/logout_button.svg"
 import reminderIcon from "../assets/img/reminder_button.svg"
 
-
-import Navbar from "../components/Navbar";
-import FavVideoSlider from "../components/FavVideoSlider"
-import FavMeditationSlider from "../components/FavMeditationSlider"
-import Logo from "../components/Logo";
+import "../sass/ProfilPage.scss"
 
 const ProfilPage = () => {
     const { user, logout } = useContext(UserContext);
 
+    const [videos, setVideos] = useState([]);
+    const [meditations, setMeditations] = useState([]);
+    const [searchTermVideo, setSearchTermVideo] = useState("");
+    const [searchTermMeditation, setSearchTermMeditation] = useState("");
+
+    // api call for FavVideos & FavMeditations
+    useEffect(() => {
+        axios.get(import.meta.env.VITE_BE_URL + `/api/yogavideos?favVideos=true`, {withCredentials: true})
+        .then((res) => setVideos(res.data))
+        .catch((err) => console.error(err));
+
+        axios.get(import.meta.env.VITE_BE_URL + `/api/meditationimages?favMeditations=true`, {withCredentials: true})
+        .then((res) => setMeditations(res.data))
+        .catch((err) => console.error(err))
+    }, []);
+
+    const filterFavVideos = videos.filter((item) => {
+        let level = item.level.toLowerCase();
+        let category = item.category.toLowerCase();
+        let description = item.description.toLowerCase();
+        let search = searchTermVideo.toLowerCase();
+        return level.includes(search) || category.includes(search) || description.includes(search);
+       });
+    
+       const filterFavMeditations = meditations.filter((item) => {
+        let level = item.level.toLowerCase();
+        let category = item.category.toLowerCase();
+        let description = item.description.toLowerCase();
+        let search = searchTermMeditation.toLowerCase();
+        return level.includes(search) || category.includes(search) || description.includes(search);
+       });
+
     return (
-        <>
+        <section className="pageWrapper">
             <Logo/>
-            <section className="profilSection">
+            <section className="profilePage">
                 <article className="nameLogoutSection">
                     <h2 className="nameHeadline">Hey {user.name}</h2>
                     <img src={logoutIcon} alt="logoutIcon" onClick={logout} className="iconSize" />
@@ -56,12 +88,14 @@ const ProfilPage = () => {
                     </div>
                 </div>
                 <h2 className="hdl-medium-green">Find your yoga favorites here</h2>
-                <FavVideoSlider className="profilSliderStyle" />
+                <Searchbar searchTerm={searchTermVideo} setSearchTerm={setSearchTermVideo}/>
+                <Slider items={filterFavVideos}/>
                 <h2 className="hdl-medium-green">Find your meditations favorites here</h2>
-                <FavMeditationSlider className="profilSliderStyle" />
+                <Searchbar searchTerm={searchTermMeditation} setSearchTerm={setSearchTermMeditation}/>
+                <Slider items={filterFavMeditations}/>
             </section>
             <Navbar />
-        </>
+        </section>
     );
 }
 
