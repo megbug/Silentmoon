@@ -34,7 +34,7 @@ const FilterButton = (props) => {
     return (
         <section className='filterButton'>
             <button onClick={() => handleButtons('reset')}><img src={allIcon}/></button>
-            <button onClick={() => handleButtons({favVideos: true})}><img src={filters.favVideos === true ? favIconActive : favIcon}/></button>
+            <button onClick={() => handleButtons({favs: true})}><img src={filters.favs === true ? favIconActive : favIcon}/></button>
             <button onClick={() => handleButtons({category: 'stressrelief'})}><img src={filters.category === 'stressrelief' ? anxiousIconActive : anxiousIcon}/></button>
             <button onClick={() => handleButtons({category: 'strength'})}><img src={filters.category === 'strength' ? strengthIconActive : strengthIcon}/></button>
             <button onClick={() => handleButtons({category: 'flexibility'})}><img src={filters.category === 'flexibility' ? flexibilityIconActive : flexibilityIcon}/></button>
