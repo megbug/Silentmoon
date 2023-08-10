@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-import '../sass/LogIn.scss';
+// import '../sass/LogIn.scss';
 
 export default function LogIn() {
     const { state: navState } = useLocation();

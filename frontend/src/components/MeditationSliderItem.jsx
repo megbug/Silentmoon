@@ -1,4 +1,4 @@
-import '../sass/SliderItem.scss'
+// import '../sass/SliderItem.scss'
 import { Link } from 'react-router-dom'
 
 const MeditationSliderItem = (props) => {

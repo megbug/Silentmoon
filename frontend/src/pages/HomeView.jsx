@@ -7,20 +7,19 @@ import MeditationSlider from "../components/MeditationSlider.jsx";
 import VideoSlider from "../components/VideoSlider.jsx";
 import HomeTopItem from "../components/HomeTopItem";
 
-import '../sass/HomeView.scss'
-import '../App.scss'
+// import '../sass/HomePage.scss'
+// import '../App.sPage
 import Logo from "../components/Logo.jsx";
 
 
-const HomeView = () => {
+const HomePage = () => {
     const { user } = useContext(UserContext);
-    // console.log(user);
 
-
-    // _________________________________
-    // SEARCHBAR
-
-
+    // return (
+    //     <section className="pageWrapper">
+    //         Ich bin die home seite
+    //     </section>
+    // )
 
 
     return (
@@ -48,4 +47,4 @@ const HomeView = () => {
     );
 }
 
-export default HomeView;
+export default HomePage;

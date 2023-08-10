@@ -1,4 +1,4 @@
-import '../sass/Navbar.scss'
+// import '../sass/Navbar.scss'
 import yogaIcon from '../assets/img/moon.svg'
 import yogaActive from '../assets/img/yoga_active.svg'
 import meditateActive from '../assets/img/meditate_active.svg'

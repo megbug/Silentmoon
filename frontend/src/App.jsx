@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import AccessPage from './pages/AccessPage';
 import Welcome from './pages/Welcome';
-import HomeView from './pages/HomeView';
+import HomePage from './pages/HomePage';
 import Yoga from './pages/Yoga'
 import Video from './pages/Video';
 import Meditation from './pages/Meditation';
@@ -12,7 +12,7 @@ import Profile from './pages/ProfilPage';
 import Reminder from './pages/Reminder'
 import ProtectedRoute from './components/ProtectedRoute';
 
-import './App.scss'
+// import './App.scss'
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
           <Route path='/video/:id' element={<Video />} />
           <Route path='/music' element={<PlaylistDetail />} />
           <Route path='/welcome' element={<Welcome />} />
-          <Route path='/home' element={<HomeView />} />
+          <Route path='/home' element={<HomePage />} />
           <Route path='/reminder' element={<Reminder />} />
         </Route>
       </Routes >

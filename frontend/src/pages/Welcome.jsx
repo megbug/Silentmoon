@@ -5,7 +5,7 @@ import { UserContext } from "../contexts/UserContext";
 
 import Logo from "../components/Logo";
 
-import '../sass/Welcome.scss'
+// import '../sass/Welcome.scss'
 
 const Welcome = () => {
     const { user } = useContext(UserContext);

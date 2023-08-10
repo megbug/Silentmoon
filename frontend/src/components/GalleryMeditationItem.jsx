@@ -3,7 +3,7 @@ import { useEffect, useState, useContext } from "react";
 import redheart from '../assets/img/red_heart.svg'
 import emptyheart from '../assets/img/empty_heart.svg'
 import { UserContext } from '../contexts/UserContext';
-import "../sass/GalleryMeditationItem.scss";
+// import "../sass/GalleryMeditationItem.scss";
 import axios from "axios";
 
 const GalleryMeditationItem = (props) => {

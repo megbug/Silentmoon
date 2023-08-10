@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-import '../sass/Backbutton.scss'
+// import '../sass/Backbutton.scss'
 
 import backbtn from '../assets/img/backbtn.svg'
 

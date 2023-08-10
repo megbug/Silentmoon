@@ -1,4 +1,4 @@
-import '../sass/Slider.scss'
+// import '../sass/Slider.scss'
 import Searchbar from "../components/SearchBar.jsx";
 import VideoSliderItem from './VideoSliderItem.jsx';
 import axios from 'axios'

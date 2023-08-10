@@ -1,5 +1,5 @@
 import axios from "axios";
-import '../sass/Gallery.scss'
+// import '../sass/Gallery.scss'
 import { useEffect, useState } from "react";
 import anxiousIcon from '../assets/img/anxious_button.svg';
 import anxiousIconActive from '../assets/img/anxious_active_button.svg';
@@ -19,9 +19,9 @@ import intermediateIcon from '../assets/img/intermediate_button.svg';
 import intermediateIconActive from '../assets/img/intermediate_button_active.svg'
 import flexibilityIcon from '../assets/img/flexibility_button.svg';
 import flexibilityIconActive from '../assets/img/flexibility_active_button.svg'
-import '../sass/Gallery.scss';
+// import '../sass/Gallery.scss';
 import DailyCalm from "./DailyCalm.jsx";
-import '../App.scss';
+// import '../App.scss';
 
 const Gallery = () => {
 

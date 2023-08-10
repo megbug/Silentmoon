@@ -1,6 +1,6 @@
 import SpotifyLogin from '../components/SpotifyLogin'
 import Dashboard from '../components/Dashboard'
-import '../sass/PlaylistDetail.scss'
+// import '../sass/PlaylistDetail.scss'
 
 const code = new URLSearchParams(window.location.search).get('code')
 

@@ -1,4 +1,4 @@
-import '../sass/Slider.scss'
+// import '../sass/Slider.scss'
 import MeditationSliderItem from './MeditationSliderItem.jsx';
 import axios from 'axios'
 import { useEffect, useState } from 'react';

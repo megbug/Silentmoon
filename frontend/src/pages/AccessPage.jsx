@@ -4,7 +4,8 @@ import SignUp from '../components/SignUp'
 import LogIn from '../components/LogIn'
 import BackButton from '../components/BackButton'
 
-import '../sass/AccessPage.scss'
+// import '../sass/AccessPage.scss'
+// import '../App.scss'
 
 const AccessPage = (props) => {
     // console.log(props)

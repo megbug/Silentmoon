@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import '../sass/SliderItem.scss'
+// import '../sass/SliderItem.scss'
 
 const FavMeditaionSliderItem = (props) => {
     return (

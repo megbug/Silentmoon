@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-import '../sass/HomeTopItem.scss';
+// import '../sass/HomeTopItem.scss';
 
 const HomeTopItem = () => {
     const [randomVideo, setRandomVideo] = useState(null);

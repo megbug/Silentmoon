@@ -23,7 +23,7 @@ import saActIcon from "../assets/img/sa_active_btn.svg";
 import suIcon from "../assets/img/su_btn.svg";
 import suActIcon from "../assets/img/su_active_btn.svg";
 
-import "../sass/Reminder.scss"
+// import "../sass/Reminder.scss"
 
 const Reminder = () => {
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-import '../sass/DailyCalm.scss'
+// import '../sass/DailyCalm.scss'
 import { Link } from 'react-router-dom';
 import playButton from '../assets/img/daily_calm_button.svg'
 

@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import SignUp from '../components/SignUp'
 import LogIn from '../components/LogIn'
 
-import '../sass/LandingPage.scss'
-import '../sass/mediaquerie.scss'
+// import '../sass/LandingPage.scss'
+// import '../sass/mediaquerie.scss'
 
 const LandingPage = () => {
 

@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import FavMediationSliderItem from "./FavMeditationSliderItem.jsx";
 import Searchbar from "./SearchBar.jsx";
-import "../sass/Gallery.scss";
+// import "../sass/Gallery.scss";
 
 const FavoriteList = () => {
 

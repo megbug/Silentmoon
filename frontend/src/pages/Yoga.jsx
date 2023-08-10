@@ -1,10 +1,17 @@
 import Gallery from '../components/Gallery';
 import Logo from '../components/Logo';
 import Navbar from '../components/Navbar'
-import "../sass/Yoga.scss";
-// import Searchbar from '../components/SearchBar';
+// import "../sass/Yoga.scss";
+import Searchbar from '../components/SearchBar';
+
 
 const Yoga = () => {
+
+    // return (
+    //     <section className="pageWrapper">
+    //         Ich bin die yoga seite
+    //     </section>
+    // )
 
 
     return (

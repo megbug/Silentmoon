@@ -7,7 +7,7 @@ import emptyheart from '../assets/img/empty_heart.svg'
 import BackButton from '../components/BackButton.jsx';
 import Navbar from '../components/Navbar.jsx'
 
-import '../sass/Video.scss'
+// import '../sass/Video.scss'
 
 import { UserContext } from '../contexts/UserContext';
 import Logo from '../components/Logo';

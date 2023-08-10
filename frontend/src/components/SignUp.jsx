@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-import '../sass/SignUp.scss'
+// import '../sass/SignUp.scss'
 
 const defaultErrorState = Object.freeze({
     general: "",

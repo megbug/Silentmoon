@@ -1,7 +1,7 @@
 import React from 'react'
 import login from '../assets/img/spotify-login.png'
 import Navbar from "../components/Navbar";
-import '../sass/SpotifyLogin.scss'
+// import '../sass/SpotifyLogin.scss'
 
 
 const AUTH_URL = import.meta.env.VITE_SPOTIFY_URL
