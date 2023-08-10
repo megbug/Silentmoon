@@ -17,7 +17,7 @@ let gridFSBucket = new mongoose.mongo.GridFSBucket(mongoose.connection, {
 
 console.log('Connected to MongoDB');
 
-for await (let imageData of data.images) {
+for (let imageData of data.images) {
 
     // upload imagefile to mongoDB using gridFS - filepath and filename are given by seed_data_img.json
     // pipe offers reading from source and uploading to destination simultaneously
@@ -37,6 +37,5 @@ for await (let imageData of data.images) {
     });
 
     await image.save();
-
-    mongoose.disconnect();
 }
+// mongoose.disconnect();

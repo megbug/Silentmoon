@@ -7,7 +7,7 @@ import thumbsupply from 'thumbsupply'
 import data from './seed_data_video.json' assert {type: 'json'};
 import { Video } from '../model/Video.js';
 
-mongoose.connect(process.env.DB);
+await mongoose.connect(process.env.DB);
 
 // GridFSBucket provides methods for working with files stored in the bucket
 // creating this bucket allows to perfom tasks as retrieving, updating etc. in the MongoDB using GridFS storage system
@@ -18,7 +18,7 @@ let gridFSBucket = new mongoose.mongo.GridFSBucket(mongoose.connection, {
 
 console.log('Connected to MongoDB');
 
-for await (let videoData of data.videos) {
+for (let videoData of data.videos) {
 
     // upload videofile to mongoDB using gridFS - filepath and filename are given by seed_data_video.json
     // pipe offers reading from source and uploading to destination simultaneously
@@ -49,6 +49,5 @@ for await (let videoData of data.videos) {
     });
 
     await video.save();
-
-    mongoose.disconnect();
 }
+// mongoose.disconnect();
