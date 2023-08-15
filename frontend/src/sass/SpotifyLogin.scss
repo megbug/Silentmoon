@@ -6,49 +6,47 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    .playlist-h1 {
+        text-align: center;
+        font-size: 2.1rem;
+        padding: 0 2rem;
+        color: #4A503D;
+        margin: 3rem 2rem 0 2rem;
+        width: 80%;
+    }
 
-.playlist-h1 {
-    text-align: center;
-    font-size: 2.1rem;
-    padding: 0 2rem;
-    color: #4A503D;
-    margin: 10rem 2rem 0 2rem;
-    width: 80%;
+    .spotifyBtn {
+        width: 20.5rem;
+        margin-top: 2rem;
+    }
+
+    .playlist-p {
+        font-size: 1.2rem;
+        text-align: center;
+        color: #4A503D;
+        margin: 1.6rem 1.6rem 0 1.6rem;
+        width: 48%;
+    }
+
+    .playbtns {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transform: translateX(10rem);
+        height: 10vh;
+        width: 50vw;
+    }
+
+    .playlist-play-btn {
+        width: 4.3rem;
+        height: 4.3rem;
+        transform: translateY(3rem);
+        margin-right: 4rem;
+    }
+
+    .playlist-information {
+        transform: translateY(3rem);
+        width: 100%;
+    }
 }
 
-.spotifyBtn {
-    width: 20.5rem;
-    margin-top: 2rem;
-}
-
-.playlist-p {
-    font-size: 1.2rem;
-    text-align: center;
-    color: #4A503D;
-    margin: 1.6rem 1.6rem 0 1.6rem;
-    width: 48%;
-}
-
-// .playbtns {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     transform: translateX(10rem);
-//     height: 10vh;
-//     width: 50vw;
-// }
-
-// .playlist-play-btn {
-//     width: 4.3rem;
-//     height: 4.3rem;
-//     transform: translateY(3rem);
-//     margin-right: 4rem;
-// }
-
-// .playlist-information {
-//     transform: translateY(3rem);
-//     width: 100%;
-// }
-
-
-}

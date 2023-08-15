@@ -1,27 +1,25 @@
 @font-face {
   font-family: 'SourceSansProRegular';
-  src: url('../assets/font/SourceSansPro-Regular.ttf');
+  src: url('../src/assets/font/SourceSansPro-Regular.ttf');
 }
 
 @font-face {
   font-family: 'SourceSansProSemibold';
-  src: url('../assets/font/SourceSansPro-SemiBold.ttf');
+  src: url('../src/assets/font/SourceSansPro-SemiBold.ttf');
 }
 
 @font-face {
   font-family: 'SourceSansProBold';
-  src: url('../assets/font/SourceSansPro-Bold.ttf');
+  src: url('../src/assets/font/SourceSansPro-Bold.ttf');
 }
 
 @font-face {
   font-family: 'SourceSansProBlack';
-  src: url('../assets/font/SourceSansPro-Black.ttf');
+  src: url('../src/assets/font/SourceSansPro-Black.ttf')
 }
 
 //--------------COLORS--------------
 
-
-$darkGreen: #4A503D;
 $darkGray: rgb(63, 65, 78);         // #3F414E
 $lightGray: rgb(161, 164, 178);     // #A1A4B2  
 $beige: rgb(250, 242, 218);         // #FAF2DA
@@ -41,251 +39,335 @@ $sansP400: 'SourceSansProRegular';
 
 //--------------GLOBALS--------------
 * {
-  margin: 0%;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 html {
-  font-size: 10px;
-  scroll-behavior: smooth;
+    font-size: 10px;
+    scroll-behavior: smooth;
 }
-
-/* ===========New Global Styling===========*/
 
 .pageWrapper {
-  // text-align: center;
-  margin: 5%;
-  // background-color: #E28F83;
+	margin: 0 4%;
+	padding-bottom: 12vh;
 }
+
+//--------------COMPONENTS--------------
 
 .logo {
-  font-family: $sansP400;
-  font-size: 1.6rem;
-  color: $darkGray;
-  letter-spacing: 3px;
-  word-spacing: 0.5rem;
-  text-align: center;
-  padding: 2rem 0;
+	font-family: $sansP400;
+	font-size: 1.6rem;
+	color: $darkGray;
+	letter-spacing: 3px;
+	word-spacing: 0.5rem;
+	text-align: center;
+	padding: 2.4rem 0;
 }
 
-  /* ======headlines======*/
+/* ======login/signup======*/
+.bigBtn {
+    font-family: $sansP400;
+    font-size: 1.6rem;
+    background-color: $blue;
+    color: $white;
+    line-height: 4.8rem;
+    width: 80%;
+    border-radius: 38px;
+}
+.input {
+    font-family: $sansP400;
+    font-size: 1.6rem;
+    background-color: transparent;
+    color: $darkGray;
+    line-height: 4.8rem;
+    width: 80%;
+    text-align: center;
+    border: 1px solid $blueBack;
+    border-radius: 38px;
+    margin: 1vh 0;
+}
+.link {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: $lightGray;
+    display: flex;
+    justify-content: center;
+    span {
+        color: rgb(102, 136, 170);
+    }
+	padding: 1vh 0;
+}
+::placeholder {
+	color: $lightGray;
+	text-transform: uppercase;
+	font-family: $sansP400;
+}
+
+/* ======slider======*/
+.slider {
+    display: flex;
+    overflow-x: scroll;
+	overflow-y: scroll;
+	padding: 1rem 0;
+}
+.sliderItemContainer {
+    min-width: 170px;
+    max-width: 170px;
+    margin-right: 1.5rem;
+}
+.sliderImg {
+    width: 100%;
+    border-radius: 1.5rem;
+    aspect-ratio: 2.2 / 1.5;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ======searchbar======*/
+.searchInput {
+    margin: 2rem 0;
+    width: 100%;
+    border: none;
+    border-radius: 1.3rem;
+    font-size: 1.2em;
+    transition: width 0.5s ease-in-out;
+    background: url('./assets/img/search.svg') no-repeat right 10px center;
+    background-color: rgba(161, 164, 178, 0.2);
+    padding: 10px;
+}
+
+/* ======filterbutton======*/
+
+.filterButton {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: scroll;
+    padding-top: 2rem;
+    img {
+		width: 6rem
+    }
+	.filterButtonContainer {
+		padding: 0 1rem;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+//--------------HEADLINES/TEXT--------------
+/* ======headlines======*/
+.headline2 {
+  	font-family: $sansP400;
+    font-size: 2.4rem;
+    color: $darkGray;
+    word-spacing: 0.2rem;
+}
+
 .pageHeadline {
-  font-family: $sansP600;
-  font-size: 3.6rem;
-  color: $darkGray;
-  // padding: 2rem auto;
+	font-family: $sansP700;
+	font-size: 2.8rem;
+	color: $darkGray;
+	padding: 1vh 0;
 }
 
 .pageSubHeadline {
-  font-family: $sansP600;
-  font-size: 2.4rem;
-  color: $darkBlue;
+	font-family: $sansP900;
+	font-size: 2rem;
+	color: $darkBlue;
+	letter-spacing: 1.2px;
+	padding: 1rem 0;
 }
 
-  /* ======p-tags for intro/questions/descriptions======*/
+.thumbnailTitle {
+	font-family: $sansP600;
+	font-size: 1.8rem;
+	color: $white;
+	text-transform: capitalize;
+}
+
+.mediThumbnail {
+	display: flex;
+	justify-content: space-between;
+	text-align: right;
+}
+
+/* ======text======*/
 .text {
-  font-family: $sansP600;
-  font-size: 1.6rem;
-  color: $lightGray;
-  text-align: center;
-  padding: 3rem 0;
+	font-family: $sansP400;
+	font-size: 1.4rem;
+	color: $lightGray;
+	padding: 1vh 0;
 }
 
-
-.weekdays img {
-  padding: 3rem 0.5vh;
+.title {
+	font-family: $sansP900;
+	font-size: 1.8rem;
+	color: $darkBlue;
+	text-transform: capitalize;
+	letter-spacing: 1px;
 }
 
-
-/* ===========New Styling End===========*/
-
-.subLogoDark {
-  font-size: 1.5rem;
-  font-family: $sansP600;
-  letter-spacing: 3px;
-  word-spacing: 0.5rem;
-  text-align: center;
-  padding-top: 2.2rem;
-}
-
-.logoLight {
-  color: $white;
-  font-size: 1.5rem;
-  font-family: $sansP600;
-  letter-spacing: 3px;
-  word-spacing: 0.5rem;
-  text-align: center;
-  padding-top: 2.2rem;
-}
-
-a {
-  // font-weight: 500;
-  // color: #646cff;
-  // text-decoration: inherit;
-  text-decoration: none;
-}
-
-//--------------BUTTONS--------------
-
-.bigBtn {
-  background-color: $blue;
-  font-size: 1.6rem;
-  line-height: 4.8rem;
-  // color: $darkGray;
-  color: $white;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  border: 1px solid $blue;
-  border-radius: 38px;
-  width: 86%;
-  // padding: 1%;
-  margin: 3% auto;
-  display: flex;
-  align-items: center;
-  font-family: $sansP400;
-}
-
-.input {
-  font-size: 1.6rem;
-  line-height: 4.8rem;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  border: 1px solid $blueBack;
-  border-radius: 38px;
-  width: 86%;
-  // width: 32rem;
-  // min-height: 5rem;
-  // max-height: 6rem;
-  // padding: 1%;
-  margin: 3% auto;
-  display: flex;
-  align-items: center;
-  background-color: transparent;
-  color: $darkGray;
-
-}
-
-::placeholder {
-  color: white;
-  color: $darkGray;
-  text-transform: uppercase;
-  font-family: $sansP400;
-}
-
-//--------------HEADLINES--------------
-
-.headline2 {
-  text-align: center;
-  font-size: 3rem;
-  padding-bottom: 1.7rem;
-  margin-top: 0.2rem;
-  color: $darkGray;
-  font-family: $sansP400;
-  letter-spacing: 1px;
-}
-
-.hdl-big-green-left {
-  font-family: $sansP900;
-  font-size: 2.4rem;
-  color: $darkGray;
-  letter-spacing: 0.25rem;
-  text-align: left;
-}
-
-.hdl-big-gray-center {
-  font-family: $sansP900;
-  font-size: 3.4rem;
-  color: $darkGray;
-  letter-spacing: 0.25rem;
-  text-align: center;
-}
-
-.hdl-medium-green {
-  font-family: $sansP900;
-  font-size: 2rem;
-  color: $darkGreen;
-  letter-spacing: 0.2rem;
-}
-
-.hdl-medium-darkgray {
-  font-family: $sansP900;
-  font-size: 2rem;
-  color: $darkGray;
-  letter-spacing: 0.2rem;
-}
-
-.description_medium_lightgray {
-  font-family: $sansP600;
-  font-size: 1.3rem;
-  color: $lightGray;
-  letter-spacing: 0.1rem;
-  font-weight: lighter;
-}
-
-.hdl-gray-sites {
-  font-size: 2.4rem;
-  color: $darkGray;
-  text-align: center;
-  margin: 35px 0 20px 0;
-  font-family: $sansP700;
-  font-size: 3rem;
-  letter-spacing: 1px;
-}
-
-.subhead-sites {
-  font-family: $sansP600;
-  color: $lightGray;
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 1.3rem;
-  letter-spacing: 0.1rem;
-}
-
-.video_category_headline {
-  color: $white;
-  font-size: 1.9rem;
-  font-family: $sansP400;
-  text-transform: capitalize;
-}
-
-.day_month_daily {
-  color: $lightGray;
-  font-size: 1.5rem;
-  font-family: $sansP600;
-  text-transform: uppercase;
-}
-
-.daily_calm_headline {
-  font-size: 2.5rem;
-  color: $darkGreen;
-  font-family: $sansP400;
-  margin-bottom: 5px;
-  letter-spacing: 1px;
-}
-
-.button_headline {
-  font-size: 1.3rem;
-  color: $lightGray;
+.level {
+	font-family: $sansP600;
+	font-size: 1.1rem;
+	color: $lightGray;
+	text-transform: uppercase;
 }
 
 .errorMessage {
-  text-align: center;
-  color: rgb(221, 52, 61);
-  display: flex;
-  justify-content: center;
-  font-size: 1.4rem;
+	color: rgb(221, 52, 61);
+	display: flex;
+	justify-content: center;
+	font-size: 1.4rem;
+	padding: 0.5vh 0;
+  }
+
+/* ===========Individual Page Styling===========*/
+
+.landingPage {
+	text-align: center;
+    .handstand {
+        background-image: url('./assets/img/handstand_border.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        padding-bottom: 60vh;
+    }
+	.accessDivApp {
+		padding: 1vh 0;
+	}
+    .signUpLink {
+        text-decoration: none;
+    }
 }
 
-/* ============ p Tags ============*/
+.accessPage {
+    background-image: url('./assets/img/bg_login.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+	.backBtn {
+		margin: 6% 6%;
+	}
+	.logInSection {
+		text-align: center;
+		.pageHeadline {
+			padding: 5vh 0;
+		}
+	}
+	.signUpSection {
+		text-align: center;
+		.pageHeadline {
+			padding: 5vh 0;
+		}
+	}
+}
 
-.pIntro  {
-  text-align: center;
-  color: $darkGray;
-  font-size: 1.6rem;
-  padding-bottom: 4.6rem;
-  line-height: 1.7rem;
-  font-family: $sansP600;
+.homePage {
+	.topItemContainer {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 2rem;
+	}
+}
+
+.yogaPage {
+	text-align: center;
+}
+
+.meditationPage {
+	text-align: center;
+}
+
+/* ======musicPage======*/
+.playlistDetail {
+    height: 100vh;
+}
+.popup {
+    height: 100vh;
+    transform: translateY(-72.5rem);
+    .pop-inner {
+        background-color: #fff;
+    }
+    .xBtn {
+        position: relative;
+        cursor: pointer;
+        z-index: 6;
+        transform: translateY(9rem);
+        padding-left: 3rem;
+    }
+}
+
+/* ======profilePage======*/
+.profilePage {
+	.nameLogoutSection {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.iconTime {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.iconSize {
+			width: 4rem;
+	}
+	.text{
+		font-size: 1.6rem;
+	} 
+}
+
+.weekdays {
+	margin: 2vh auto;
+	text-align: center;
+	img {
+		padding-right: 1vh;
+	}
+}
+
+/* ======videoPage======*/
+.videoBackground {
+	background-image: url('./assets/img/videoPageBackground.svg');
+	height: 100vh;
+	.backBtn{
+		margin-left: 2%;
+		margin-bottom: 2rem;
+	}
+}
+.videoPage {
+	.textSection {
+		padding: 2rem 0;
+		.pageHeadline {
+			text-transform: capitalize;
+		}
+		.level {
+			font-size: 1.4rem;
+			padding: 0.5rem 0;
+		}
+	}
+}
+
+/* ======welcomePage======*/
+.welcomePage {
+	background-image: url('../src/assets/img/yoga_women.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 85vh; 
+    .logo {
+        color: rgb(254, 252, 248);
+    }
+    .pageHeadline {
+        color: rgb(254, 252, 248);
+        margin: 5%;
+        width: 35%;
+    }
+}
+.buttonWelcome {
+    margin: 1rem auto;
+    text-align: center;
 }

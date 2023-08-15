@@ -11,7 +11,7 @@ export default function MeditationPlaylistFirst({ accessToken }) {
     setPictureClicked(!pictureClicked);
   };
 
-  useEffect(() => setPlay(true), ["37i9dQZF1DWVS1recTqXhf"])
+  useEffect(() => setPlay(true), ['37i9dQZF1DWVS1recTqXhf'])
 
   const spotifyApi = new SpotifyWebApi({
       headers: {
@@ -34,7 +34,7 @@ export default function MeditationPlaylistFirst({ accessToken }) {
         token={accessToken}
         showSaveIcon
         play={play}
-        uris="spotify:playlist:37i9dQZF1DWVS1recTqXhf"
+        uris='spotify:playlist:37i9dQZF1DWVS1recTqXhf'
         />
     </div>
   )

@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
-import '../sass/HomeTopItem.scss';
+import "../sass/HomeTopItem.scss";
 
 const HomeTopItem = () => {
     const [randomVideo, setRandomVideo] = useState(null);
@@ -28,12 +28,12 @@ const HomeTopItem = () => {
     };
 
     return (
-        <div className="home_item" style={thumbnailStyle}>
-            <h3 className="home_item_headline">{randomVideo.category}</h3>
-            <p className="home_item_level">{randomVideo.level}</p>
-            <div className="home_item_bottom">
+        <div className="homeItemContainer" style={thumbnailStyle}>
+            <h3 className="title">{randomVideo.category}</h3>
+            <p className="level">{randomVideo.level}</p>
+            <div className="homeItemBtn">
                 <Link to={`/video/${randomVideo._id}`}>
-                    <button className="home_topItem_btn">START</button>
+                    <button className="startBtn">start</button>
                 </Link>
             </div>
         </div>

@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-import '../sass/DailyCalm.scss'
-import { Link } from 'react-router-dom';
 import playButton from '../assets/img/daily_calm_button.svg'
+
+import '../sass/DailyCalm.scss'
 
 const DailyCalm = () => {
     const [randomVideo, setRandomVideo] = useState(null);
@@ -27,13 +28,13 @@ const DailyCalm = () => {
     const month = currentDate.toLocaleString('default', { month: 'long' });
     const day = currentDate.getDate();
     return (
-        <section className="daily_calm_section">
-            <div>
-                <h3 className='daily_calm_headline'>Daily Calm</h3>
-                <p className='day_month_daily'>{`${month} ${day}`}</p>
+        <section className='dailyCalmSection'>
+            <div className='dailyCalmInput'>
+                <h3 className='title'>Daily Calm</h3>
+                <p className='level'>{`${month} ${day}`}</p>
             </div>
             <div>
-                <Link to={`/video/${randomVideo._id}`}><img src={playButton} className='play_button_dailycalm'></img></Link>
+                <Link to={`/video/${randomVideo._id}`}><img src={playButton}></img></Link>
             </div>
         </section>
     );

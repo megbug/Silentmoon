@@ -1,17 +1,23 @@
 .reminderPage {
     text-align: center;
-    padding: 3rem 0;
-    .timePicker {
-        padding: 3rem 0.5vh;
+    .text {
+        font-size: 1.6rem;
     }
-    .reminder_btn {
-        padding: 3rem 0;
+    .timePicker {
+        padding: 4rem 0;
+    }
+    .weekdays {
+        padding: 4rem 0;
+    }
+    .reminderBtn {
+        margin: 4rem 0;
     }
     #later {
         background-color: transparent;
         color: rgb(102, 136, 170)
     }
 }
+
 .react-ios-time-picker-main {
     .react-ios-time-picker-input {
         text-align: center;
@@ -43,5 +49,5 @@
 }
 
 .react-ios-time-picker-popup {
-    margin-bottom: 37vh;
-}  
+    margin-bottom: 45vh;
+}
