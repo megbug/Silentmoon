@@ -10,8 +10,6 @@ import DailyCalm from '../components/DailyCalm';
 import Gallery from '../components/Gallery';
 import Navbar from '../components/Navbar'
 
-import "../sass/Meditation.scss";
-
 const Meditation = () => {
     const { user } = useContext(UserContext);
 
@@ -33,13 +31,12 @@ const Meditation = () => {
     return level.includes(search) || category.includes(search) || description.includes(search);
    });
 
-
     return (
-        <section className='pageWrapper'>
-            <Logo/>
-            <section className='meditationPage'>
+        <section>
+            <Logo />
+            <section className='meditationPage pageWrapper'>
                 <h2 className='pageHeadline'>Meditation</h2>
-                <h3 className='subhead-sites'>Audio-only meditation techniques to help you minimize your screen time and practice on the go.</h3>
+                <h3 className='text'>Audio-only meditation techniques to help you minimize your screen time and practice on the go.</h3>
                 <FilterButton filters={filters} setFilters={setFilters}/>
                 <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
                 <DailyCalm />

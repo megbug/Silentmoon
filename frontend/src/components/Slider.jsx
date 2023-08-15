@@ -4,7 +4,7 @@ const Slider = (props) => {
     const {items} = props;
 
     return (
-        <section>
+        <section className="slider">
             {items.length > 0 && items.map((item, i) => {
                 return (
                     <SliderItem

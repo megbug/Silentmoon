@@ -4,10 +4,10 @@ import axios from "axios";
 
 import { UserContext } from "../contexts/UserContext";
 
-import redheart from '../assets/img/red_heart.svg'
-import emptyheart from '../assets/img/empty_heart.svg'
+import redheart from "../assets/img/red_heart.svg"
+import emptyheart from "../assets/img/empty_heart.svg"
 
-// import "../sass/GalleryItem.scss";
+import "../sass/Gallery.scss";
 
 const GalleryItem = (props) => {
     let isVideo = props.isVideo;
@@ -19,47 +19,53 @@ const GalleryItem = (props) => {
 
         if (number === 1) {
             setSize("thumbnailSmall");
+            console.log('thumbnailSmall')
         } else if (number === 2) {
             setSize("thumbnailMedium");
+            console.log('thumbnailMedium')
         } else if (number === 3) {
             setSize("thumbnailLarge");
+            console.log('thumbnailLarge')
         }
     }, []);
 
+    let backgroundImage = {
+        backgroundImage:`url(${import.meta.env.VITE_BE_URL}/api/image/${props.filename})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        objectFit: "cover"
+    }
+
+    let backgroundVideo = {
+        backgroundImage:`url(${import.meta.env.VITE_BE_URL}/api/thumbnail/${props.thumbnail})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        objectFit: "cover"
+    }
+
     return (
-        <section>
+        <>
             {
             isVideo ?
-                <article>
-                    <h2>{props.category}</h2>
-                    <Link to={`/video/${props.id}`} className={`${size}`}>
-                        <img src={import.meta.env.VITE_BE_URL + `/api/thumbnail/${props.thumbnail}`} alt="" />
-                    </Link>
-                </article>
+                <Link style={backgroundVideo} className={`${size}`} to={`/video/${props.id}`}>
+                    <h2 className="thumbnailTitle">{props.category}</h2>
+                </Link>
             :
-                <article className={`${size}`}>
+                // article braucht backgroundImage aka meditationsImage
+                <article className={`mediThumbnail ${size}`} style={backgroundImage}>
                     <img 
                         src={user.favMeditations?.includes(props.id) ? redheart : emptyheart} 
                         alt=""
                         onClick={() => {axios.put(import.meta.env.VITE_BE_URL + `/api/favouriseMeditation/${props.id}`, {}, {withCredentials: true}).then((res)=> {setUser(res.data)})}} 
                     />
                     <Link to={"/music"}>
-                    <h2>{props.title}</h2>
+                    <h2 className="thumbnailTitle">{props.title}</h2>
                     </Link>
                 </article>
             }
-        </section>
+        </>
 
     )
-
-    // const backgroundImageStyle = {
-    //     backgroundImage: `url(${import.meta.env.VITE_BE_URL}/api/thumbnail/${props.thumbnail})`,
-    //     backgroundSize: "cover",
-    //     backgroundPosition: "center",
-    //     objectFit: "cover",
-    // };
-
-
 };
 
 export default GalleryItem;

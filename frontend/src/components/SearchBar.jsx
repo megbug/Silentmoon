@@ -1,5 +1,3 @@
-// import '../sass/SearchBar.scss'
-
 const Searchbar = (props) => {
     const {searchTerm, setSearchTerm} = props;
 
@@ -8,7 +6,7 @@ const Searchbar = (props) => {
     };
 
     return (
-        <input type="text" value={searchTerm} onChange={handleSearch} placeholder="looking for something?"/>
+        <input className="searchInput" type="text" value={searchTerm} onChange={handleSearch}/>
     );
 };
 

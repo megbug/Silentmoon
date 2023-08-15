@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import SignUp from '../components/SignUp'
 import LogIn from '../components/LogIn'
 
-// import '../sass/LandingPage.scss'
 // import '../sass/mediaquerie.scss'
 
 const LandingPage = () => {
@@ -14,12 +13,13 @@ const LandingPage = () => {
     const [accessRoute, setAccessRoute] = useState('');
 
     return (
-        <section className='landingContainer'>
-            <div className='handstand'></div>
-            <div className='accessArea'>
+        <section className='landingPage'>
+            <div className='handstand'>
                 <h1 className='logo'>SILENT MOON</h1>
+            </div>
+            <div className='accessArea pageWrapper'>
                 <h2 className='headline2'>We are what we do</h2>
-                <p className='text'>Thousands of people are using silent moon <br /> for meditation and yoga classes.</p>
+                <p className='text'>Thousands of people are using silent moon for meditation and yoga classes.</p>
                 
                 {isDesktop ? 
                     <div className='accessDiv'>
@@ -30,9 +30,9 @@ const LandingPage = () => {
                         <div className='accessLogIn'>{accessRoute == 'LogIn' && (<LogIn/>)}</div>
                     </div>
                 : 
-                    <div>
-                        <Link to={'/signup'} className='intro-Btn-Link' ><button className='bigBtn'>SIGN UP</button></Link>
-                        <Link to={'/login'} className='introLink'>ALREADY HAVE AN ACCOUNT? &nbsp; <span> LOG IN</span></Link>
+                    <div className='accessDivApp'>
+                        <Link to={'/signup'} className='signUpLink' ><button className='bigBtn'>SIGN UP</button></Link>
+                        <Link to={'/login'} className='link'>ALREADY HAVE AN ACCOUNT? &nbsp; <span> LOG IN</span></Link>
                     </div>
                 }
             </div>

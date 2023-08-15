@@ -1,4 +1,8 @@
-// import '../sass/Navbar.scss'
+import { useContext, useState, useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
+
+import { UserContext } from "../contexts/UserContext.jsx";
+
 import yogaIcon from '../assets/img/moon.svg'
 import yogaActive from '../assets/img/yoga_active.svg'
 import meditateActive from '../assets/img/meditate_active.svg'
@@ -9,10 +13,8 @@ import musicIcon from '../assets/img/music.svg'
 import musicActive from '../assets/img/music_active.svg'
 import profileIcon from '../assets/img/profile.svg'
 import profileActive from '../assets/img/profile_active.svg'
-import { NavLink } from 'react-router-dom';
-import { useContext, useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { UserContext } from "../contexts/UserContext.jsx";
+
+import '../sass/Navbar.scss'
 
 const Navbar = () => {
     const location = useLocation();
@@ -27,7 +29,7 @@ const Navbar = () => {
 
     const [activeRoute, setRouteStates] = useState(routeStates);
     const { user } = useContext(UserContext);
-    console.log(user);
+    // console.log(user);
 
     useEffect(() => {
         const updatedRouteStates = { ...routeStates };
@@ -40,20 +42,20 @@ const Navbar = () => {
     }, [location]);
 
     return (
-        <section className="navcontainer">
+        <section className='navContainer'>
             <nav>
                 {Object.keys(activeRoute).map((route) => (
                     <NavLink
                         key={route}
                         to={route}
                         className={`linkscontainer ${activeRoute[route].isActive ? 'active' : ''}`}
-                        activeclassname="active"
+                        activeclassname='active'
                     >
                         <div className='iconcontainer'>
                             <img
-                                alt="moon icon"
+                                alt='moon icon'
                                 src={activeRoute[route].isActive ? activeRoute[route].activeIcon : activeRoute[route].icon}
-                                className="hovericon"
+                                className='hovericon'
                             />
                         </div>
                         {route === '/profile' ? (

@@ -1,16 +1,16 @@
-import axios from 'axios';
-import ReactPlayer from 'react-player/file';
 import { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import redheart from '../assets/img/red_heart.svg'
-import emptyheart from '../assets/img/empty_heart.svg'
+import ReactPlayer from 'react-player/file';
+import axios from 'axios';
+
+import { UserContext } from '../contexts/UserContext';
+
+import Logo from '../components/Logo';
 import BackButton from '../components/BackButton.jsx';
 import Navbar from '../components/Navbar.jsx'
 
-// import '../sass/Video.scss'
-
-import { UserContext } from '../contexts/UserContext';
-import Logo from '../components/Logo';
+import redheart from '../assets/img/red_heart.svg'
+import emptyheart from '../assets/img/empty_heart.svg'
 
 const Video = () => {
     const { user, setUser } = useContext(UserContext);
@@ -28,30 +28,29 @@ const Video = () => {
     }, [])
 
     return (
-        <section className='pageWrapper'>
+        <section>
             <div className='videoBackground'>
-            <article className='videoSection'>
                 <Logo/>
                 <BackButton />
-                {/* ReactPlayer streams videofile*/}
-                <div className='player-wrapper'>
-                    <ReactPlayer className='react-player'
-                        url={import.meta.env.VITE_BE_URL + `/api/videostream/${video.filename}`}
-                        controls={true}
-                        width='100%'
-                        height='100%'
-                        loop={true}
-                    />
-                </div>
-                <div className='textSection'>
-                    <img src={user.favVideos?.includes(id) ? redheart : emptyheart} alt="" onClick={() => { axios.put(import.meta.env.VITE_BE_URL + `/api/favouriseVideo/${id}`, {}, { withCredentials: true }).then((res) => { setUser(res.data) }) }} />
-                    <h2 className='hdl-medium-green title-head'>{video.title}</h2>
-                    <h2 className='level-head'>{video.level}</h2>
-                    <p className='description-head'>{video.description}</p>
-                </div>
-            </article>
+                <article className='videoPage pageWrapper'>
+                    <div>
+                        <ReactPlayer
+                            url={import.meta.env.VITE_BE_URL + `/api/videostream/${video.filename}`}
+                            controls={true}
+                            width='100%'
+                            height='100%'
+                            loop={true}
+                        />
+                    </div>
+                    <div className='textSection'>
+                        <img src={user.favVideos?.includes(id) ? redheart : emptyheart} alt="" onClick={() => { axios.put(import.meta.env.VITE_BE_URL + `/api/favouriseVideo/${id}`, {}, { withCredentials: true }).then((res) => { setUser(res.data) }) }} />
+                        <h2 className='pageHeadline'>{video.title}</h2>
+                        <h2 className='level'>{video.level}</h2>
+                        <p className='text'>{video.description}</p>
+                    </div>
+                </article>
+            </div>
             <Navbar />
-        </div>
         </section>
     );
 }

@@ -17,8 +17,6 @@ import beginnerIconActive from '../assets/img/beginner_button_active.svg';
 import intermediateIconActive from '../assets/img/intermediate_button_active.svg'
 import expertIconActive from '../assets/img/expert_button_active.svg';
 
-import '../sass/FilterButton.scss'
-
 const FilterButton = (props) => {
     const {filters, setFilters} = props;
 
@@ -33,14 +31,38 @@ const FilterButton = (props) => {
 
     return (
         <section className='filterButton'>
-            <button onClick={() => handleButtons('reset')}><img src={allIcon}/></button>
-            <button onClick={() => handleButtons({favs: true})}><img src={filters.favs === true ? favIconActive : favIcon}/></button>
-            <button onClick={() => handleButtons({category: 'stressrelief'})}><img src={filters.category === 'stressrelief' ? anxiousIconActive : anxiousIcon}/></button>
-            <button onClick={() => handleButtons({category: 'strength'})}><img src={filters.category === 'strength' ? strengthIconActive : strengthIcon}/></button>
-            <button onClick={() => handleButtons({category: 'flexibility'})}><img src={filters.category === 'flexibility' ? flexibilityIconActive : flexibilityIcon}/></button>
-            <button onClick={() => handleButtons({level: 'beginner'})}><img src={filters.level === 'beginner' ? beginnerIconActive : beginnerIcon}/></button>
-            <button onClick={() => handleButtons({level: 'intermediate'})}><img src={filters.level === 'intermediate' ? intermediateIconActive : intermediateIcon}/></button>
-            <button onClick={() => handleButtons({level: 'expert'})}><img src={filters.level === 'expert' ? expertIconActive : expertIcon}/></button>
+            <div className='filterButtonContainer'>
+                <button onClick={() => handleButtons('reset')}><img src={allIcon}/></button>
+                <p className='text'>All</p>
+            </div>
+            <div className='filterButtonContainer'>
+                <button onClick={() => handleButtons({favs: true})}><img src={filters.favs === true ? favIconActive : favIcon}/></button>
+                <p className='text'>Favourites</p>
+            </div>
+            <div className='filterButtonContainer'>
+               <button onClick={() => handleButtons({category: 'stressrelief'})}><img src={filters.category === 'stressrelief' ? anxiousIconActive : anxiousIcon}/></button>
+                <p className='text'>Stress</p>
+            </div>
+            <div className='filterButtonContainer'>
+                <button onClick={() => handleButtons({category: 'strength'})}><img src={filters.category === 'strength' ? strengthIconActive : strengthIcon}/></button>
+                <p className='text'>Strength</p>
+            </div>
+            <div className='filterButtonContainer'>
+                <button onClick={() => handleButtons({category: 'flexibility'})}><img src={filters.category === 'flexibility' ? flexibilityIconActive : flexibilityIcon}/></button>
+                <p className='text'>Flexibility</p>
+            </div>
+            <div className='filterButtonContainer'>
+                <button onClick={() => handleButtons({level: 'beginner'})}><img src={filters.level === 'beginner' ? beginnerIconActive : beginnerIcon}/></button>
+                <p className='text'>Beginner</p>
+            </div>
+            <div className='filterButtonContainer'>
+                <button onClick={() => handleButtons({level: 'intermediate'})}><img src={filters.level === 'intermediate' ? intermediateIconActive : intermediateIcon}/></button>
+                <p className='text'>Intermediate</p>
+            </div>
+            <div className='filterButtonContainer'>
+                <button onClick={() => handleButtons({level: 'expert'})}><img src={filters.level === 'expert' ? expertIconActive : expertIcon}/></button>
+                <p className='text'>Expert</p>
+            </div>
         </section>
     )
 }

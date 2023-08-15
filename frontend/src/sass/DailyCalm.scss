@@ -1,16 +1,21 @@
-/*
-.daily_calm_section {
+.dailyCalmSection {
     background-image: url("../assets/img/daily_calm.png");
     background-position: center;
     background-size: cover;
     border-radius: 10px;
-    padding: 3rem 4rem 3rem 3rem;
+    padding: 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .dailyCalmInput {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        .title {
+            font-size: 2.2rem;
+        }
+        .level {
+            font-size: 1.4rem;
+        }
+    }
 }
-
-.play_button_dailycalm {
-    width: 125%;
-}
-*/

@@ -1,12 +1,11 @@
-import axios from "axios"
-
 import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom"
 import { TimePicker } from "react-ios-time-picker"
+import axios from "axios"
 
 import { UserContext } from "../contexts/UserContext";
 
-import Logo from '../components/Logo.jsx'
+import Logo from "../components/Logo.jsx"
 
 import moIcon from "../assets/img/mo_btn.svg";
 import moActIcon from "../assets/img/mo_active_btn.svg";
@@ -23,7 +22,7 @@ import saActIcon from "../assets/img/sa_active_btn.svg";
 import suIcon from "../assets/img/su_btn.svg";
 import suActIcon from "../assets/img/su_active_btn.svg";
 
-// import "../sass/Reminder.scss"
+import "../sass/Reminder.scss"
 
 const Reminder = () => {
 
@@ -60,9 +59,9 @@ const Reminder = () => {
     }
 
     return (
-        <section className='pageWrapper'>
+        <section>
             <Logo/>
-            <article className="reminderPage">
+            <article className="reminderPage pageWrapper">
                 <h3 className="pageSubHeadline">What time would like to meditate?</h3>
                 <p className="text">Choose the time you like to be reminded: </p>
 
@@ -80,11 +79,11 @@ const Reminder = () => {
                     <img src={days.includes("sa") ? saActIcon : saIcon} alt="" onClick={() => { handleDays("sa") }} />
                     <img src={days.includes("su") ? suActIcon : suIcon} alt="" onClick={() => { handleDays("su") }} />
                 </div>
-                <div className="reminder_btn">
+                <div className="reminderBtn">
                     <button onClick={() => { handleSubmit() }} type="submit" className="bigBtn">Save</button>
                     <Link to={"/home"}><button className="bigBtn" id="later">Maybe later</button></Link>
                 </div>
-            </article >
+            </article>
         </section >
     );
 }

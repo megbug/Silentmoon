@@ -10,8 +10,6 @@ import DailyCalm from '../components/DailyCalm';
 import Gallery from '../components/Gallery';
 import Navbar from '../components/Navbar'
 
-import "../sass/Yoga.scss";
-
 const Yoga = () => {
     const { user } = useContext(UserContext);
 
@@ -34,9 +32,9 @@ const Yoga = () => {
    });
 
     return (
-        <section className='pageWrapper'>
+        <section>
             <Logo/>
-            <section className='yogaPage'>
+            <section className='yogaPage pageWrapper'>
                 <h2 className='pageHeadline'>Yoga</h2>
                 <h3 className='text'>Find your inner zen from annywhere.</h3>
                 <FilterButton filters={filters} setFilters={setFilters}/>

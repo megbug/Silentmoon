@@ -27,8 +27,6 @@ import suActIcon from "../assets/img/su_active_btn.svg";
 import logoutIcon from "../assets/img/logout_button.svg"
 import reminderIcon from "../assets/img/reminder_button.svg"
 
-import "../sass/ProfilPage.scss"
-
 const ProfilPage = () => {
     const { user, logout } = useContext(UserContext);
 
@@ -65,16 +63,16 @@ const ProfilPage = () => {
        });
 
     return (
-        <section className="pageWrapper">
+        <section>
             <Logo/>
-            <section className="profilePage">
+            <section className="profilePage pageWrapper">
                 <article className="nameLogoutSection">
-                    <h2 className="nameHeadline">Hey {user.name}</h2>
+                    <h2 className="pageHeadline">Hey {user.name}</h2>
                     <img src={logoutIcon} alt="logoutIcon" onClick={logout} className="iconSize" />
                 </article>
                 <div className="reminderSection">
                     <article className="iconTime">
-                        <p className="showTime">{user.reminder?.time}</p>
+                        <p className="text">{user.reminder?.time}</p>
                         <Link to={"/reminder"}><img src={reminderIcon} alt="bellIcon" className="iconSize" /></Link>
                     </article>
                     <div className="weekdays">
@@ -87,10 +85,10 @@ const ProfilPage = () => {
                         <img src={user.reminder?.days.includes("su") ? suActIcon : suIcon} alt="" />
                     </div>
                 </div>
-                <h2 className="hdl-medium-green">Find your yoga favorites here</h2>
+                <h2 className="pageSubHeadline">Find your yoga favorites here</h2>
                 <Searchbar searchTerm={searchTermVideo} setSearchTerm={setSearchTermVideo}/>
                 <Slider items={filterFavVideos}/>
-                <h2 className="hdl-medium-green">Find your meditations favorites here</h2>
+                <h2 className="pageSubHeadline">Find your meditations favorites here</h2>
                 <Searchbar searchTerm={searchTermMeditation} setSearchTerm={setSearchTermMeditation}/>
                 <Slider items={filterFavMeditations}/>
             </section>

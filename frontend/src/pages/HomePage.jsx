@@ -7,10 +7,7 @@ import Logo from "../components/Logo.jsx";
 import Navbar from "../components/Navbar.jsx";
 import Searchbar from "../components/SearchBar.jsx";
 import Slider from "../components/Slider.jsx";
-
-import '../sass/HomePage.scss'
-
-// import HomeTopItem from "../components/HomeTopItem.jsx";
+import HomeTopItem from "../components/HomeTopItem.jsx";
 
 const HomePage = () => {
     const { user } = useContext(UserContext);
@@ -46,22 +43,22 @@ const HomePage = () => {
    });
 
     return (
-        <section className="pageWrapper">
-            <div className="homeContainer">
+        <section>
             <Logo/>
-            <h2 className="hdl-medium-green">Namasté {user.name}</h2>
-            <p className="description_medium_lightgray">We hope you have a good day</p>
-            {/* <article className="homeTopItem_container"> */}
-                {/* <HomeTopItem /> */}
-                {/* <HomeTopItem /> */}
-            {/* </article> */}
+            <div className="homePage pageWrapper">
+            <h2 className="pageSubHeadline">Namasté {user.name}</h2>
+            <p className="text">We hope you have a good day</p>
+            <article className="topItemContainer">
+                <HomeTopItem />
+                <HomeTopItem />
+            </article>
             <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
-            <h2>Recommened Yoga for you</h2>
+            <h2 className="pageSubHeadline">Recommened Yoga for you</h2>
             <Slider items={filterVideos}/>
-            <h2>Recommened Meditations for you</h2>
+            <h2 className="pageSubHeadline">Recommened Meditations for you</h2>
             <Slider items={filterMeditations}/>
-            <Navbar />
             </div>
+            <Navbar />
         </section>
     );
 }
