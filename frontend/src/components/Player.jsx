@@ -1,7 +1,7 @@
-import React from "react";
-import SpotifyPlayer from "react-spotify-web-playback";
 import { useEffect, useState } from "react";
-// import '../sass/MeditationPlaylistFirst.scss'
+import SpotifyPlayer from "react-spotify-web-playback";
+
+import "../sass/MeditationPlaylistFirst.scss"
 
 export default function Player({ accessToken, playlistUri }) {
   const [play, setPlay] = useState(false);
@@ -11,13 +11,13 @@ export default function Player({ accessToken, playlistUri }) {
 
   return (
     <SpotifyPlayer
-      token={accessToken}
-      showSaveIcon
-      callback={(state) => {
-        if (!state.isPlaying) setPlay(false);
-      }}
-      play={play}
-      uris={playlistUri ? [playlistUri] : []}
+		token={accessToken}
+		showSaveIcon
+		callback={(state) => {
+			if (!state.isPlaying) setPlay(false)
+		}}
+		play={play}
+		uris={playlistUri ? [playlistUri] : []}
     />
   );
 }

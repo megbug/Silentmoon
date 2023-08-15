@@ -2,8 +2,6 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-// import '../sass/SignUp.scss'
-
 const defaultErrorState = Object.freeze({
     general: "",
     name: "",
@@ -61,7 +59,7 @@ export default function SignUp({isDesktop}) {
     }
 
     return (
-        <section className='signUpPage'>
+        <section className='signUpSection'>
             <h2 className='pageHeadline'>Create your account</h2>
             <form onSubmit={handleSubmit}>
                 <input className='input' type='text' id='name' placeholder='name' value={data.name} onChange={(e) => { setData({ ...data, name: e.currentTarget.value }) }} />

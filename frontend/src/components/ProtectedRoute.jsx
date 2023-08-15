@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Navigate, Outlet, useLocation } from "react-router-dom";
-import axios from 'axios'
+import axios from "axios"
 
 const ProtectedRoute = () => {
 
@@ -23,7 +23,7 @@ const ProtectedRoute = () => {
     }, [location.pathname])
 
     if (isAuth === null) {
-        console.log('null')
+        console.log("null")
     } else if (!isAuth) {
         return (
             <Navigate to="/" replace={true} />

@@ -1,4 +1,3 @@
-// import '../sass/PopUpPlayer.scss'
 import xBtn from '../assets/img/xBtn.png'
 
 export default function PopUpPlayer(props) {

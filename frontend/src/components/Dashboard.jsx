@@ -7,7 +7,7 @@ import playbtn from '../assets/img/playbtn.png'
 import PlaylistSearchResult from './PlaylistSearchResult';
 import Player from './Player';
 import Navbar from './Navbar';
-// import '../sass/Dashboard.scss'
+import '../sass/Dashboard.scss'
 import xBtn from '../assets/img/xBtn.png'
 
 
