@@ -12,7 +12,7 @@ import Profile from './pages/ProfilPage';
 import Reminder from './pages/Reminder'
 import ProtectedRoute from './components/ProtectedRoute';
 
-// import './App.scss'
+import './App.scss'
 
 function App() {
   return (
