@@ -10,6 +10,9 @@ import Slider from "../components/Slider.jsx";
 import HomeTopItem from "../components/HomeTopItem.jsx";
 
 const HomePage = () => {
+
+    let isDesktop = window.screen.width > 390
+
     const { user } = useContext(UserContext);
 
     const [videos, setVideos] = useState([]);
@@ -43,7 +46,7 @@ const HomePage = () => {
    });
 
     return (
-        <section>
+        <section className={ isDesktop ? "mobile" : ""}>
             <Logo/>
             <div className="homePage pageWrapper">
             <h2 className="pageSubHeadline">Namasté {user.name}</h2>

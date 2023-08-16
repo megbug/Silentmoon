@@ -3,12 +3,16 @@ import GalleryItem from "./GalleryItem";
 import "../sass/Gallery.scss"
 
 const Gallery = (props) => {
+
+    let isDesktop = window.screen.width > 390
+
     let {items} = props;
 
     const sizes = ["thumbnailSmall", "thumbnailMedium", "thumbnailLarge"];
 
     return (
-        <section  className="galleryGrid">
+        <section className={ isDesktop ? 'mobile' : ''}>
+            <section  className="galleryGrid">
             {items.length > 0 && items.map((item, i) => {
                 return (
                     <GalleryItem
@@ -22,6 +26,7 @@ const Gallery = (props) => {
                         isVideo={props.isVideo}
                     />
                 )})}
+            </section>
         </section>
     )
 }
