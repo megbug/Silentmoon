@@ -28,6 +28,7 @@ import logoutIcon from "../assets/img/logout_button.svg"
 import reminderIcon from "../assets/img/reminder_button.svg"
 
 const ProfilPage = () => {
+    
     const { user, logout } = useContext(UserContext);
 
     const [videos, setVideos] = useState([]);

@@ -1,0 +1,180 @@
+
+.mobile {
+    .landingPage {
+        display: flex;
+        justify-content: space-around;
+        margin: 8% 10%;
+        .handstand {
+            width: 30%;
+            border-radius: 3rem;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .accessArea {
+            width: 30%;
+            border-radius: 3rem;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            .headline2 {
+                margin: 2rem;
+            }
+            .text {
+                margin: 2rem;
+            }
+            .accessDiv {
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-template-areas: 
+                    "btnA btnB"
+                    "form form";
+                .btnA {
+                    grid-area: btnA;
+                    padding: 2rem 0;
+                    margin-left: 2rem;
+                    border-radius: 2rem 0 0 2rem;
+                    font-size: 1.6rem;
+                }
+
+                .btnA:hover {
+                    background-color: rgb(102, 136, 170); 
+                    color: rgb(254, 252, 248);
+                }
+                .btnB {
+                    grid-area: btnB;
+                    padding: 2rem 0;
+                    margin-right: 2rem;
+                    border-radius: 0 2rem 2rem 0;
+                    font-size: 1.6rem;
+                }
+                .btnB:hover {
+                    background-color: rgb(102, 136, 170); 
+                    color: rgb(254, 252, 248);
+                }
+
+                .accessSignUp {
+                    grid-area: form;
+                    .pageHeadline {
+                        font-size: 2rem;
+                        padding: 2rem;
+                    }
+                    .input {
+                        line-height: 3rem;
+                        margin: 0;
+                        width: 60%;
+                        font-size: 1.4rem;
+                    }
+                    .bigBtn {
+                        font-size: 1.4rem;
+                        line-height: 3rem;
+                        width: 60%;
+                    }
+                }
+                .accessLogIn {
+                    grid-area: form;
+                    .pageHeadline {
+                        font-size: 2rem;
+                        padding: 2rem;
+                    }
+                    .input {
+                        font-size: 1.4rem;
+                        line-height: 3rem;
+                        margin: 0;
+                        width: 60%;
+                    }
+                    .bigBtn {
+                        font-size: 1.4rem;
+                        line-height: 3rem;
+                        width: 60%;
+                    }
+                } 
+            }
+        }
+    }
+    .homePage {
+        .topItemContainer {
+            justify-content: flex-start;
+            .homeItemContainer {
+                margin-right: 3%;
+            }
+        }
+    }
+
+    .videoBackground {
+        .backBtn {
+            margin-bottom: 1rem;
+        }
+        .videoPage {
+            .reactPlayer {
+                width: 60%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .reminderPage {
+        .bigBtn {
+            width: 20%;
+            margin: 0 2%;
+        }
+        #later{
+            border: 1px solid rgba(102, 136, 170, 0.6);;
+        }
+    }
+
+    .spotify-login-div {
+        background-image: none;
+    .spotifyLoginSection {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 4rem;
+            background-image: url('../assets/img/spotify-background.jpeg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 50%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            margin-top: 10%;
+           .spotifyBtn {
+            width: 35%;
+           }
+        }
+    }
+
+    .welcomeDesktop {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        margin: auto 4%;
+    }
+    .welcomePage {
+        background: none;
+        width: 70%;
+        background-size: contain;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .logo {
+            color: rgb(63, 65, 78); 
+        }
+        .pageHeadline {
+            color: rgba(102, 136, 170, 0.6);
+            width: 50%;
+        }
+    }
+    .buttonWelcome {
+        width: 30%;
+        margin-left: 4%;
+        .bigBtn {
+            width: 100%;
+        }
+    }
+
+    .filterButton {
+        overflow-x: hidden;
+    }
+    .galleryGrid {
+        grid-template-columns: repeat(auto-fill, 23.5%);
+    }
+   
+}

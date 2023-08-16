@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 import "../sass/HomeTopItem.scss";
+import '../sass/mediaquery.scss'
 
 const HomeTopItem = () => {
     const [randomVideo, setRandomVideo] = useState(null);

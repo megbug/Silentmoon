@@ -36,6 +36,7 @@ export default function LogIn() {
             <h2 className="pageHeadline">Welcome Back!</h2>
             <form onSubmit={loginHandler}>
                 <input className="input" type="email" id="email" placeholder="EMAIL" value={user.email} onChange={(e) => { setUser({ ...user, email: e.currentTarget.value }) }}></input>
+                <small className="errorMessage">{error}</small>
                 <input className="input" type="password" id="password" placeholder="PASSWORD" value={user.password} onChange={(e) => { setUser({ ...user, password: e.currentTarget.value }) }}></input>
                 <small className="errorMessage">{error}</small>
                 <button className="bigBtn">LOGIN</button>

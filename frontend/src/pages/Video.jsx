@@ -13,6 +13,9 @@ import redheart from '../assets/img/red_heart.svg'
 import emptyheart from '../assets/img/empty_heart.svg'
 
 const Video = () => {
+
+    let isDesktop = window.screen.width > 390
+
     const { user, setUser } = useContext(UserContext);
     // id gets send with Link-to-path of GalleryItem - id is ObjID from MongoDB 
     let { id } = useParams();
@@ -28,12 +31,12 @@ const Video = () => {
     }, [])
 
     return (
-        <section>
+        <section className={ isDesktop ? 'mobile' : ''}>
             <div className='videoBackground'>
                 <Logo/>
                 <BackButton />
                 <article className='videoPage pageWrapper'>
-                    <div>
+                    <div className='reactPlayer'>
                         <ReactPlayer
                             url={import.meta.env.VITE_BE_URL + `/api/videostream/${video.filename}`}
                             controls={true}

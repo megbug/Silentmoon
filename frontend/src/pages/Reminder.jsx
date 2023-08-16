@@ -26,6 +26,8 @@ import "../sass/Reminder.scss"
 
 const Reminder = () => {
 
+    let isDesktop = window.screen.width > 390
+
     const { user, setUser } = useContext(UserContext);
 
     console.log(user);
@@ -59,7 +61,7 @@ const Reminder = () => {
     }
 
     return (
-        <section>
+        <section className={ isDesktop ? "mobile" : ""}>
             <Logo/>
             <article className="reminderPage pageWrapper">
                 <h3 className="pageSubHeadline">What time would like to meditate?</h3>

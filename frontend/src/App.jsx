@@ -13,6 +13,7 @@ import Reminder from './pages/Reminder'
 import ProtectedRoute from './components/ProtectedRoute';
 
 import './App.scss'
+import './sass/mediaquery.scss'
 
 function App() {
   return (
