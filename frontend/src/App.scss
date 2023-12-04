@@ -110,6 +110,9 @@ html {
     overflow-x: scroll;
 	padding: 1rem 0;
 }
+.slider::-webkit-scrollbar {
+    display: none;
+  }
 .sliderItemContainer {
     min-width: 170px;
     max-width: 170px;
