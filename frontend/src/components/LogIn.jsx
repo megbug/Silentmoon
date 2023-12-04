@@ -7,8 +7,8 @@ export default function LogIn() {
     const nav = useNavigate();
     const [error, setError] = useState(navState?.redirectReason || "");
     const [user, setUser] = useState({
-        email: "",
-        password: "",
+        email: "demo@meghub.de",
+        password: "demo",
     });
 
     const loginHandler = async (e) => {
